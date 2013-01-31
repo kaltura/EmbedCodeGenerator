@@ -1,0 +1,16 @@
+<script src="{{scriptUrl}}"></script>
+<object id="{{elementName}}" name="{{elementName}}" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" allowScriptAccess="always" height="{{height}}" width="{{width}}" bgcolor="#000000" {{metaAtts}} data="{{swfUrl}}">
+	<param name="allowFullScreen" value="true" />
+	<param name="allowNetworking" value="all" />
+	<param name="allowScriptAccess" value="always" />
+	<param name="bgcolor" value="#000000" />
+	<param name="flashVars" value="{{flashVars}}" />
+	<param name="movie" value="{{swfUrl}}" />
+	{{metaTags}}
+	{{#if includeKalturaLinks}}
+	<a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
+	<a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a> 
+	<a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>
+	<a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a>
+	{{/if}}
+</object>

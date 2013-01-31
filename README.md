@@ -1,19 +1,18 @@
-
 ## Kaltura Embed Code Generator
 
 The purpose of this script is to generate kaltura embed codes.
 Kaltura has several types of embed codes that can be used to embed Kaltura players and videos on your sites.
 
 #### How to use:
- 1. Include the script in your page:
+##### Step 1: Include the script in your page:
 
-```
+```javascript
  <script src="/{path_to_script}/KalturaEmbedCodeGenerator.min.js"></script>
 ```
 
-2. Create a new instance of the generator and get the embed code:
+##### Step 2: Create a new instance of the generator and get the embed code:
 
-```
+```html
 <textarea id="code"></textarea>
 <script>
 var gen = new EmbedCodeGenerator({
@@ -30,4 +29,4 @@ var embedCode = gen.getCode();
 document.getElementById('code').innerHTML = embedCode;
 </script>
 ```
-3. Done!
+##### Step 3: Done!

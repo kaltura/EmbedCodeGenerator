@@ -30,3 +30,11 @@ document.getElementById('code').innerHTML = embedCode;
 </script>
 ```
 ##### Step 3: Done!
+
+
+#### Dependencies:
+This script uses ```JSON.strinify``` method which is supported nativaliy in modern browsers.
+If you need to support older browsers, please add ```json2.js``` script before.
+```javascript
+<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+```

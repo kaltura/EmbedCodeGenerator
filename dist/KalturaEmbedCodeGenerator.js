@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v0.1.0 - 2013-01-31
+/*! Kaltura Embed Code Generator - v0.1.0 - 2013-02-01
 * http://www.kaltura.com/
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 
@@ -274,7 +274,53 @@ Handlebars.VM = {
 Handlebars.template = Handlebars.VM.template;
 ;
 
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b.auto=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+="&cache_st=",i=c.cacheSt,e=i||a.cacheSt,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"cacheSt",{hash:{}})),d+=o(e),d}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+"?autoembed=true&entry_id=",i=c.entry,g=i||b.entry,g=g===null||g===undefined||g===!1?g:g.id,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"entry.id",{hash:{}})),f+=o(g)+"&playerId=",i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g),i=c.cacheSt,g=i||b.cacheSt,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&width=",i=c.uiConf,g=i||b.uiConf,g=g===null||g===undefined||g===!1?g:g.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"uiConf.width",{hash:{}})),f+=o(g)+"&height=",i=c.uiConf,g=i||b.uiConf,g=g===null||g===undefined||g===!1?g:g.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"uiConf.height",{hash:{}})),f+=o(g),i=c.flashVars,g=i||b.flashVars,i=c.flashVarsUrl,h=i||b.flashVarsUrl,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsUrl",g,{hash:{}}):g=h;if(g||g===0)f+=g;return f+='"></script>',f}),b.legacy=a(function(a,b,c,d,e){function p(a,b){return'\n	<a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a> \n	<a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a>\n	'}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+'"></script>\n<object id="',i=c.elementName,g=i||b.elementName,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"elementName",{hash:{}})),f+=o(g)+'" name="',i=c.elementName,g=i||b.elementName,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"elementName",{hash:{}})),f+=o(g)+'" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" allowScriptAccess="always" height="',i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g)+'" width="',i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+'" bgcolor="#000000" ',i=c.metaAtts,g=i||b.metaAtts,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"metaAtts",{hash:{}})),f+=o(g)+' data="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'">\n	<param name="allowFullScreen" value="true" />\n	<param name="allowNetworking" value="all" />\n	<param name="allowScriptAccess" value="always" />\n	<param name="bgcolor" value="#000000" />\n	<param name="flashVars" value="',i=c.flashVars,g=i||b.flashVars,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"flashVars",{hash:{}})),f+=o(g)+'" />\n	<param name="movie" value="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'" />\n	',i=c.metaTags,g=i||b.metaTags,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"metaTags",{hash:{}})),f+=o(g)+"\n	",i=c.includeKalturaLinks,g=i||b.includeKalturaLinks,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;return f+="\n</object>",f}),b.legacy_seo=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i=this,j="function",k=c.helperMissing,l=void 0,m=this.escapeExpression;return f+='<a rel="media:thumbnail" href="',h=c.thumbUrl,g=h||b.thumbUrl,typeof g===j?g=g.call(b,{hash:{}}):g===l&&(g=k.call(b,"thumbUrl",{hash:{}})),f+=m(g)+'"></a>\n<span property="dc:description" content="',h=c.description,g=h||b.description,typeof g===j?g=g.call(b,{hash:{}}):g===l&&(g=k.call(b,"description",{hash:{}})),f+=m(g)+'"></span>\n<span property="media:title" content="',h=c.name,g=h||b.name,typeof g===j?g=g.call(b,{hash:{}}):g===l&&(g=k.call(b,"name",{hash:{}})),f+=m(g)+'"></span>\n<span property="media:width" content="',h=c.width,g=h||b.width,typeof g===j?g=g.call(b,{hash:{}}):g===l&&(g=k.call(b,"width",{hash:{}})),f+=m(g)+'"></span>\n<span property="media:height" content="',h=c.height,g=h||b.height,typeof g===j?g=g.call(b,{hash:{}}):g===l&&(g=k.call(b,"height",{hash:{}})),f+=m(g)+'"></span>\n<span property="media:type" content="application/x-shockwave-flash"></span>',f})})()
+(function (window, Handlebars, undefined ) {
+/**
+* Transforms flashVars object into a string for Url or Flashvars string.
+*
+* @method flashVarsToUrl
+* @param {Object} flashVarsObject A flashvars object
+* @param {String} paramName The name parameter to add to url
+* @return {String} Returns flashVars string like: &foo=bar or &param[foo]=bar
+*/
+var flashVarsToUrl = function( flashVarsObject, paramName ) {
+	 var params = '';
+
+	 var paramPrefix = (paramName) ? paramName + '[' : '';
+	 var paramSuffix = (paramName) ? ']' : '';
+
+	 for( var i in flashVarsObject ){
+		 // check for object representation of plugin config:
+		 if( typeof flashVarsObject[i] == 'object' ){
+			 for( var j in flashVarsObject[i] ){
+				 params+= '&' + paramPrefix + encodeURIComponent( i ) +
+				 	'.' + encodeURIComponent( j ) + paramSuffix + 
+				 	'=' + encodeURIComponent( flashVarsObject[i][j] );
+			 }
+		 } else {
+			 params+= '&' + paramPrefix + encodeURIComponent( i ) + paramSuffix + '=' + encodeURIComponent( flashVarsObject[i] );
+		 }
+	 }
+	 return params;
+};
+
+// Setup handlebars helpers
+Handlebars.registerHelper('flashVarsUrl', function(flashVars) {
+	return flashVarsToUrl(flashVars, 'flashvars');
+});
+Handlebars.registerHelper('flashVarsString', function(flashVars) {
+	return flashVarsToUrl(flashVars);
+});
+Handlebars.registerHelper('elAttributes', function( attributes ) {
+	var str = '';
+	for( var i in attributes ) {
+		str += ' ' + i + '="' + attributes[i] + '"';
+	}
+	return str;
+});	
+
+})(this, this.Handlebars);
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b.auto=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+="&entry_id=",i=c.entry,e=i||a.entry,e=e===null||e===undefined||e===!1?e:e.id,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entry.id",{hash:{}})),d+=o(e),d}function q(a,b){var d="",e;return d+="&cache_st=",i=c.cacheSt,e=i||a.cacheSt,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"cacheSt",{hash:{}})),d+=o(e),d}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+"?autoembed=true",i=c.entry,g=i||b.entry,g=g===null||g===undefined||g===!1?g:g.id,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&playerId=",i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g),i=c.cacheSt,g=i||b.cacheSt,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&width=",i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+"&height=",i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g),i=c.flashVars,g=i||b.flashVars,i=c.flashVarsUrl,h=i||b.flashVarsUrl,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsUrl",g,{hash:{}}):g=h;if(g||g===0)f+=g;return f+='"></script>',f}),b.dynamic=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i,j=this,k="function",l=c.helperMissing,m=void 0,n=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"scriptUrl",{hash:{}})),f+=n(g)+'"></script>\n<div id="',i=c.playerId,g=i||b.playerId,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"playerId",{hash:{}})),f+=n(g)+'"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===k?g=h.call(b,g,{hash:{}}):h===m?g=l.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='></div>\n<script type="text/javascript">\nkWidget.',i=c.embedMethod,g=i||b.embedMethod,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"embedMethod",{hash:{}})),f+=n(g)+"(",i=c.kWidgetObject,g=i||b.kWidgetObject,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"kWidgetObject",{hash:{}}));if(g||g===0)f+=g;return f+=");\n</script>",f}),b.legacy=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+='\n	<a rel="media:thumbnail" href="',i=c.entry,e=i||a.entry,e=e===null||e===undefined||e===!1?e:e.thumbUrl,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entry.thumbUrl",{hash:{}})),d+=o(e)+'"></a>\n	<span property="dc:description" content="',i=c.entry,e=i||a.entry,e=e===null||e===undefined||e===!1?e:e.description,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entry.description",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:title" content="',i=c.entry,e=i||a.entry,e=e===null||e===undefined||e===!1?e:e.name,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entry.name",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:width" content="',i=c.width,e=i||a.width,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"width",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:height" content="',i=c.height,e=i||a.height,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"height",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:type" content="application/x-shockwave-flash"></span>	\n	',d}function q(a,b){return'\n	<a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a> \n	<a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a>\n	'}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+'"></script>\n<object id="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" name="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" allowScriptAccess="always" height="',i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g)+'" width="',i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+'" bgcolor="#000000"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+=' data="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'">\n	<param name="allowFullScreen" value="true" />\n	<param name="allowNetworking" value="all" />\n	<param name="allowScriptAccess" value="always" />\n	<param name="bgcolor" value="#000000" />\n	<param name="flashVars" value="',i=c.flashVars,g=i||b.flashVars,i=c.flashVarsString,h=i||b.flashVarsString,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsString",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='" />\n	<param name="movie" value="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'" />\n	',i=c.includeSeoMetadata,g=i||b.includeSeoMetadata,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;i=c.includeKalturaLinks,g=i||b.includeKalturaLinks,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;return f+="\n</object>",f})})()
 // Add indexOf to array object
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function (searchElement /*, fromIndex */ ) {
@@ -348,23 +394,16 @@ if (!Object.keys) {
     };
   })();
 }
-/*
- * Embed Code Generator
- * Used to generate different type of embed code
- * Depended on Handlebars ( http://handlebarsjs.com/ )
- */
- // http://ejohn.org/blog/simple-javascript-inheritance/
+(function( window, undefined ) {
 
- (function( window, undefined ) {
-
-Handlebars.registerHelper('flashVarsUrl', function(flashVars) {
-	var str = '';
-	for(var key in flashVars) {
-		str += '&flashvars[' + key + ']=' + encodeURIComponent(flashVars[ key ]);
-	}
-	return str;
-});
-
+/**
+* Merge two object together
+*
+* @method extend
+* @param {Object} destination object to merge into
+* @param {Object} sourece object to merge from
+* @return {Object} Merged object
+*/
 var extend = function(destination, source) {
     for (var property in source) {
         if (!destination.hasOwnProperty(property)) {
@@ -373,7 +412,13 @@ var extend = function(destination, source) {
     }
     return destination;
 };
-
+/**
+* Check if property is null
+*
+* @method isNull
+* @param {Any} property some var
+* @return {Boolean}
+*/
 var isNull = function( property ) {
 	if (property.length && property.length > 0) {
 		return false;
@@ -386,7 +431,14 @@ var isNull = function( property ) {
 	}
 	return !property;
 };
-
+/**
+* Kaltura Embed Code Generator
+* Used to generate different type of embed codes
+* Depended on Handlebars ( http://handlebarsjs.com/ )
+* 
+* @class EmbedCodeGenerator
+* @constructor
+*/
 var EmbedCodeGenerator = function( options ) {
 	this.init( options );
 };
@@ -394,24 +446,165 @@ var EmbedCodeGenerator = function( options ) {
 EmbedCodeGenerator.prototype = {
 
 	types: ['auto', 'dynamic', 'thumb', 'legacy'],
-	required: ['host', 'widgetId', 'partnerId', 'uiConf'],
+	required: ['widgetId', 'partnerId', 'uiConfId'],
 
 	defaults: {
+		/**
+		* Embed code type to generate
+		* Can we one of: ['auto', 'dynamic', 'thumb', 'legacy']
+		* 
+		* @property embedType
+		* @type {String}
+		* @default "legacy"
+		*/		
 		embedType: 'legacy',
+		/**
+		* The Player element Id / Name that will be used for embed code
+		* 
+		* @property playerId
+		* @type {String}
+		* @default "kaltura_player"
+		*/			
 		playerId: 'kaltura_player',
+		/**
+		* Embed HTTP protocol to use
+		* Can we one of: ['http', 'https']
+		* 
+		* @property protocol
+		* @type {String}
+		* @default "http"
+		*/			
 		protocol: 'http',
-		host: null,
-		secured_host: null,
+		/**
+		* Host for loading html5 library & kdp swf
+		* 
+		* @property host
+		* @type {String}
+		* @default "www.kaltura.com"
+		*/			
+		host: 'www.kaltura.com',
+		/**
+		* Secured host for loading html5 library & kdp swf
+		* Used if protocol is: 'https'
+		* 
+		* @property secured_host
+		* @type {String}
+		* @default "www.kaltura.com"
+		*/		
+		secured_host: 'www.kaltura.com',
+		/**
+		* Kaltura Widget Id
+		* 
+		* @property widgetId
+		* @type {String}
+		* @default "_{partnerId}"
+		*/
 		widgetId: null,
+		/**
+		* Kaltura Partner Id
+		* 
+		* @property partnerId
+		* @type {Number}
+		* @default null,
+		*/
 		partnerId: null,
-		cacheSt: 0,
-		uiConf: {},
+		/**
+		* Add cacheSt parameter to bust cache
+		* Should be unix timestamp of future time
+		* 
+		* @property cacheSt
+		* @type {Number}
+		* @default null,
+		*/		
+		cacheSt: null,
+		/**
+		* Kaltura UiConf Id
+		* 
+		* @property uiConfId
+		* @type {Number}
+		* @default null,
+		*/		
+		uiConfId: null,
+		/**
+		* Entry Object similar to:
+		* {
+		*	id: '0_xxxxxx', 
+		*	name: 'Foo', 
+		*	description: 'Bar', 
+		*	thumbUrl: 'http://cdnbakmi.kaltura.com/thumbnail/...'
+		* }
+		* 
+		* @property entry
+		* @type {Object}
+		* @default {},
+		*/		
 		entry: {},
+		/**
+		* Sets Player Width
+		* 
+		* @property width
+		* @type {Number}
+		* @default 400,
+		*/		
+		width: 400,
+		/**
+		* Sets Player Height
+		* 
+		* @property height
+		* @type {Number}
+		* @default 330,
+		*/		
+		height: 330,
+		/**
+		* Adds additonal attributes to embed code.
+		* Example:
+		* {
+		*	"class": "player"
+		* }
+		* 
+		* @property attributes
+		* @type {Object}
+		* @default {},
+		*/	
+		attributes: {},
+		/**
+		* Adds flashVars to player
+		* Example:
+		* {
+		*	"autoPlay": "true"
+		* }
+		* 
+		* @property flashVars
+		* @type {Object}
+		* @default {},
+		*/			
 		flashVars: {},
+		/**
+		* Include Kaltura SEO links to embed code
+		* 
+		* @property includeKalturaLinks
+		* @type {Boolean}
+		* @default true,
+		*/
 		includeKalturaLinks: true,
+		/**
+		* Include Entry Seo Metadata
+		* Metadata is taken from {entry} object
+		* 
+		* @property includeSeoMetadata
+		* @type {Boolean}
+		* @default true,
+		*/		
 		includeSeoMetadata: true	
 	},
 
+	/**
+	* Set default options to EmbedCodeGenerator instance
+	*
+	* @method init
+	* @param {Object} options Configuration object based on defaults object
+	* @return {Object} Returns the current instance
+	*/
 	init: function( options ) {
 
 		var defaults = this.defaults;
@@ -432,18 +625,14 @@ EmbedCodeGenerator.prototype = {
 
 		return this;
 	},
-
-	checkRequiredParams: function( params ) {
-		var requiredLength = this.required.length,
-			i = 0;
-		// Check for required configuration
-		for(i; i<requiredLength; i++) {
-			if( isNull(params[this.required[i]]) ) {
-				throw 'Missing required parameter: ' + this.required[i];
-			}
-		}
-	},
-
+	/**
+	* Get or Set default configuration
+	*
+	* @method config
+	* @param {String} key configuration property name
+	* @param {Any} value to set
+	* @return {Mixed} Return the value for the key, configuration object or null
+	*/
 	config: function( key, val ) {
 		// Used as getter
 		if( val === undefined && typeof key === 'string' && this.options.hasOwnProperty(key) ) {
@@ -459,100 +648,189 @@ EmbedCodeGenerator.prototype = {
 		}
 		return null;
 	},
-
+	/**
+	* Check if required parameters are missing
+	*
+	* @method checkRequiredParams
+	* @param {Object} Configuration object
+	* @return throws exception if missing parameters
+	*/
+	checkRequiredParams: function( params ) {
+		var requiredLength = this.required.length,
+			i = 0;
+		// Check for required configuration
+		for(i; i<requiredLength; i++) {
+			if( isNull(params[this.required[i]]) ) {
+				throw 'Missing required parameter: ' + this.required[i];
+			}
+		}
+	},	
+	/**
+	* Check if embed type is part of types array
+	*
+	* @method checkValidType
+	* @param {String} type - One of config embed types
+	* @return throws exception if not valid
+	*/
+	checkValidType: function( type ) {
+		var valid = (this.types.indexOf(type) !== -1) ? true : false;;
+		if( !valid ) {
+			throw 'Embed type: ' + type + ' is not valid. Available types: ' + this.types.join(",");
+		}
+	},
+	/**
+	* Get Handlebars template based on embed type
+	*
+	* @method getTemplate
+	* @param {String} type - One of config embed types
+	* @return {Mixed} If found returns Handlebars template function, else null
+	*/
 	getTemplate: function( type ) {
+		// Dynamic embed and Thumb embed has the same template
+		type = (type == 'thumb') ? 'dynamic' : type;		
 		return ( type && Handlebars.templates && Handlebars.templates[ type ] ) ? Handlebars.templates[ type ] : null;
 	},
-
-	isValid: function( type ) {
-		if( type ) {
-			return (this.types.indexOf(type) !== -1) ? true : false;
-		}
-		return false;
+	/**
+	* Check if embed type is using kWidget embed
+	*
+	* @method isKWidgetEmbed
+	* @param {String} type - One of config embed types
+	* @return {Boolean} true / false
+	*/
+	isKWidgetEmbed: function( type ) {
+		return ( type == 'dynamic' || type == 'thumb' ) ? true : false;
 	},
-
+	/**
+	* Get embed host based on protocol
+	*
+	* @method getHost
+	* @param {Object} params Configuration object
+	* @return {String} Embed host
+	*/
+	getHost: function( params ) {
+		return (params.protocol === 'http') ? params.host : params.secured_host;
+	},
+	/**
+	* Generate HTML5 library script url
+	*
+	* @method getScriptUrl
+	* @param {Object} params Configuration object
+	* @return {String} HTML5 library script Url
+	*/
 	getScriptUrl: function( params ) {
-		var host = (params.protocol === 'http') ? params.host : params.secured_host;
-		return params.protocol + '://' + host + '/p/' + params.partnerId + '/sp/' + params.partnerId + '00/embedIframeJs/uiconf_id/' + params.uiConf.id + '/partner_id/' + params.partnerId;
+		return params.protocol + '://' + this.getHost(params) + '/p/' + params.partnerId + '/sp/' + params.partnerId + '00/embedIframeJs/uiconf_id/' + params.uiConfId + '/partner_id/' + params.partnerId;
 	},
+	/**
+	* Generate Flash SWF url
+	*
+	* @method getSwfUrl
+	* @param {Object} params Configuration object
+	* @return {String} Flash player SWF url
+	*/
+	getSwfUrl: function( params ) {
+		var cacheSt = (params.cacheSt) ? '/cache_st/' + params.cacheSt : '';
+		var entryId = (params.entry.id) ? '/entry_id/' + params.entry.id : '';
+		return params.protocol + '://' + this.getHost(params) + '/index.php/kwidget' + cacheSt + 
+				'/wid/' + params.widgetId + '/uiconf_id/' + params.uiConfId + entryId;
+	},
+	/**
+	* Generate attributes object based on configuration
+	*
+	* @method getAttributes
+	* @param {Object} params Configuration object
+	* @return {Object} Attributes object
+	*/
+	getAttributes: function( params ) {
+		if( ! params ) { 
+			return {}; 
+		}
 
+		var attrs = {};
+
+		// Add style attribute for dynamic / thumb embeds
+		if( this.isKWidgetEmbed( params.embedType ) ) {
+			attrs['style'] = 'width: ' + params.width + 'px; height: ' + params.height + 'px;';
+		}
+
+		// Add Seo attributes
+		if( params.embedType == 'legacy' && params.includeSeoMetadata ) {
+			attrs["xmlns:dc"] = "http://purl.org/dc/terms/";
+			attrs["xmlns:media"] = "http://search.yahoo.com/searchmonkey/media/";
+			attrs["rel"] = "media:video";
+			attrs["resource"] = this.getSwfUrl( params );
+		}
+
+		params.attributes = extend(params.attributes, attrs);		
+		return params.attributes;
+	},
+	/**
+	* Generate kWidget object for HTML5 library
+	*
+	* @method getEmbedObject
+	* @param {Object} params Configuration object
+	* @return {Object} kWidget object
+	*/
+	getEmbedObject: function( params ) {
+		// Used by kWidget.embed
+		var embedObject = {
+			targetId: params.playerId,		
+			wid: params.widgetId,
+			uiconf_id: params.uiConfId,
+			flashvars: params.flashVars
+		};
+		// Add cacheSt
+		if( params.cacheSt ) {
+			embedObject['cache_st'] = cacheSt;
+		}
+		// Add entryId
+		if( params.entry.id ) {
+			embedObject['entry_id'] = params.entry.id;
+		}
+		// Transform object into a string
+		return JSON.stringify(embedObject, null, 2);
+	},
+	/**
+	* Generate Final Embed Code
+	*
+	* @method getCode
+	* @param {Object} params Configuration object
+	* @return {String} HTML embed code
+	*/
 	getCode: function( params ) {
+
 		// Merge with options
 		params = extend( params, this.config() );
 
-		// Check for missing params
-		this.checkRequiredParams(params);
+		this.checkRequiredParams(params); // Check for missing params
+		this.checkValidType(params.embedType); // Check if embed type is valid
 
-		// Check if embed type is valid
-		if( ! this.isValid(params.embedType) ) {
-			throw 'Embed type: ' + params.embedType + ' is not valid. Available types: ' + this.types.join(",");
-		}
 		// Check if we have a template
 		var template = this.getTemplate(params.embedType);
 		if( ! template ) {
 			throw 'Template: ' + params.embedType + ' is not defined as Handlebars template';
 		}
 
+		// Add basic attributes for all embed codes
 		var data = {
-			scriptUrl: this.getScriptUrl( params )
+			scriptUrl: this.getScriptUrl( params ),
+			attributes: this.getAttributes( params )
 		};
+		// Add SWF Url for flash embeds
+		if( params.embedType === 'legacy' ) {
+			data['swfUrl'] = this.getSwfUrl( params );
+		}
+		// Add embed method and embed object for dynamic embeds
+		if( this.isKWidgetEmbed( params.embedType ) ) {
+			data['embedMethod'] = (params.embedType == 'dynamic') ? 'embed' : 'thumbEmbed';
+			data['kWidgetObject'] = this.getEmbedObject( params );
+		}
 
 		data = extend( data, params );
 		return template( data );
-
 	}
 };
 
-/*
-
-	getSwfUrl: function() {
-		var url = this.config('protocol') + '://' + this.config('host') + '/index.php/kwidget/cache_st/' + 
-					this.getCacheKey() + '/wid/' + this.config('widgetId') + '/uiconf_id/' + this.config('uiConfId');
-		if( this.config('entryId') ) {
-			url += '/entry_id/' + this.config('entryId');
-		}
-		return url;
-	},
-
-	getMetaAtts: function() {
-		if( this.get('includeSeoLinks') ) {
-			return 'xmlns:dc="http://purl.org/dc/terms/" xmlns:media="http://search.yahoo.com/searchmonkey/media/" rel="media:video" resource="' + this.getSwfUrl() + '"';	
-		}
-		return '';
-	},
-
-	getMetaTags: function() {
-		var tags = '';
-
-		if( this.get('includeKalturaLinks') ) {
-			tags += $('#kaltura_links').html();
-		}
-
-		if( this.get('includeSeoLinks') ) {
-			tags += _.template(
-				$('#media_seo_info'), {
-					thumbUrl: this.getThumbnailUrl(),
-					name: this.get('name'),
-					description: this.get('description'),
-					width: this.get('width'),
-					height: this.get('height')
-			});
-		}
-
-		return tags;
-	},	
-
-	getCacheKey: function() {
-		if( ! this.cacheKey ) {
-			var d = new Date;
-			this.cacheKey = Math.floor(d.getTime() / 1000) + (15 * 60); // time + 15 mins
-		}
-		return this.cacheKey;
-	},
-
-*/
-
 // Export module to window object
-window.EmbedCodeGenerator = EmbedCodeGenerator;
+window.kEmbedCodeGenerator = EmbedCodeGenerator;
 
  })(this);

@@ -15,7 +15,7 @@ Kaltura has several types of embed codes that can be used to embed Kaltura playe
 ```html
 <textarea id="code"></textarea>
 <script>
-var gen = new EmbedCodeGenerator({
+var gen = new kEmbedCodeGenerator({
 	host: 'www.kaltura.com',
 	partnerId: 0000,
 	uiConf: {
@@ -34,7 +34,9 @@ document.getElementById('code').innerHTML = embedCode;
 
 #### Dependencies:
 This script uses ```JSON.strinify``` method which is supported nativaliy in modern browsers.
-If you need to support older browsers, please add ```json2.js``` script before.
+If you need to support older browsers, please add the following code.
 ```javascript
+<!--[if lt IE 9]>
 <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<![endif]-->
 ```

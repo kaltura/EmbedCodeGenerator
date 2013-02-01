@@ -22,8 +22,9 @@ module.exports = function(grunt) {
         src: [
           '<banner:meta.banner>', 
           'lib/handlebars.runtime.js', 
+          'lib/handlebars.helpers.js',
           'lib/templates.js', 
-          'lib/utils.js', 
+          'lib/utils.js',
           'lib/EmbedCodeGenerator.js'
         ],
         dest: 'dist/KalturaEmbedCodeGenerator.js'

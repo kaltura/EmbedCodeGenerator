@@ -1,37 +1,43 @@
-## Kaltura Embed Code Generator
+# Kaltura Embed Code Generator
 
-The purpose of this script is to generate kaltura embed codes.
-Kaltura has several types of embed codes that can be used to embed Kaltura players and videos on your sites.
+This Javascript library can be used to generate Kaltura Embed Codes.
 
-#### How to use:
-##### Step 1: Include the script in your page:
+It was designed to easiliy create embed codes on-the-fly for your projects.
 
-```javascript
- <script src="/{path_to_script}/KalturaEmbedCodeGenerator.min.js"></script>
-```
+## Quick Start
 
-##### Step 2: Create a new instance of the generator and get the embed code:
+1. Include ```KalturaEmbedCodeGenerator.js``` to your page.
 
-```html
-<textarea id="code"></textarea>
-<script>
-var gen = new kEmbedCodeGenerator({
-	partnerId: 0000,
-	uiConfId: 999,
-	entryId: '0_xsd34g3'
-});
-var embedCode = gen.getCode();
-document.getElementById('code').innerHTML = embedCode;
-</script>
-```
-##### Step 3: Done!
+	```html
+	<script src="/{path_to_script}/KalturaEmbedCodeGenerator.min.js"></script>
+	```
+
+2. Create a new instance of the generator, pass in configuration object and call ```getCode``` method.
+
+	```html
+	<textarea id="code"></textarea>
+	<script>
+	var gen = new kEmbedCodeGenerator({
+		partnerId: 0000,
+		uiConfId: 999,
+		entryId: '0_xsd34g3'
+	});
+	document.getElementById('code').innerHTML = gen.getCode();
+	</script>
+	```
 
 
-#### Dependencies:
-This script uses ```JSON.strinify``` method which is supported nativaliy in modern browsers.
+## Dependencies:
+
+This library uses Handlebars to manage the embed code templates and includes handlebars.runtime.js library.
+If your project already uses handlebars, you can remove that file from ```grunt.js``` file.
+
+This library also uses ```JSON.strinify``` method which is supported nativaliy in modern browsers.
 If you need to support older browsers, please add the following code.
-```javascript
-<!--[if lt IE 9]>
-<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
-<![endif]-->
-```
+
+	```html
+	<!--[if lt IE 9]>
+	<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+	<![endif]-->
+	```
+	

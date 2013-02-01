@@ -67,6 +67,8 @@ console.log(gen.getCode({
 }));
 ```
 
+If you like to play with all the different options you're welcome to try out the [demo](http://kaltura.github.com/EmbedCodeGenerator/demo/)
+
 ## Dependencies
 
 This library uses [Handlebars](http://handlebarsjs.com/) to manage the embed code templates and includes ```handlebars.runtime.js``` library.

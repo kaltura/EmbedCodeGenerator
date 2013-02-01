@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v0.1.0 - 2013-02-01
+/*! Kaltura Embed Code Generator - v1.0.0 - 2013-02-01
 * https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 
@@ -320,7 +320,7 @@ Handlebars.registerHelper('elAttributes', function( attributes ) {
 });	
 
 })(this, this.Handlebars);
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b.auto=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+="&entry_id=",i=c.entryId,e=i||a.entryId,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryId",{hash:{}})),d+=o(e),d}function q(a,b){var d="",e;return d+="&cache_st=",i=c.cacheSt,e=i||a.cacheSt,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"cacheSt",{hash:{}})),d+=o(e),d}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+"?autoembed=true",i=c.entryId,g=i||b.entryId,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&playerId=",i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g),i=c.cacheSt,g=i||b.cacheSt,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&width=",i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+"&height=",i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g),i=c.flashVars,g=i||b.flashVars,i=c.flashVarsUrl,h=i||b.flashVarsUrl,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsUrl",g,{hash:{}}):g=h;if(g||g===0)f+=g;return f+='"></script>',f}),b.dynamic=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i,j=this,k="function",l=c.helperMissing,m=void 0,n=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"scriptUrl",{hash:{}})),f+=n(g)+'"></script>\n<div id="',i=c.playerId,g=i||b.playerId,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"playerId",{hash:{}})),f+=n(g)+'"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===k?g=h.call(b,g,{hash:{}}):h===m?g=l.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='></div>\n<script type="text/javascript">\nkWidget.',i=c.embedMethod,g=i||b.embedMethod,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"embedMethod",{hash:{}})),f+=n(g)+"(",i=c.kWidgetObject,g=i||b.kWidgetObject,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"kWidgetObject",{hash:{}}));if(g||g===0)f+=g;return f+=");\n</script>",f}),b.legacy=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+='\n	<a rel="media:thumbnail" href="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.thumbUrl,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.thumbUrl",{hash:{}})),d+=o(e)+'"></a>\n	<span property="dc:description" content="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.description,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.description",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:title" content="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.name,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.name",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:width" content="',i=c.width,e=i||a.width,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"width",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:height" content="',i=c.height,e=i||a.height,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"height",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:type" content="application/x-shockwave-flash"></span>	\n	',d}function q(a,b){return'\n	<a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a> \n	<a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a>\n	'}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+'"></script>\n<object id="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" name="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" allowScriptAccess="always" height="',i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g)+'" width="',i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+'" bgcolor="#000000"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+=' data="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'">\n	<param name="allowFullScreen" value="true" />\n	<param name="allowNetworking" value="all" />\n	<param name="allowScriptAccess" value="always" />\n	<param name="bgcolor" value="#000000" />\n	<param name="flashVars" value="',i=c.flashVars,g=i||b.flashVars,i=c.flashVarsString,h=i||b.flashVarsString,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsString",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='" />\n	<param name="movie" value="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'" />\n	',i=c.includeSeoMetadata,g=i||b.includeSeoMetadata,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;i=c.includeKalturaLinks,g=i||b.includeKalturaLinks,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;return f+="\n</object>",f})})()
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b.auto=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+="&entry_id=",i=c.entryId,e=i||a.entryId,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryId",{hash:{}})),d+=o(e),d}function q(a,b){var d="",e;return d+="&cache_st=",i=c.cacheSt,e=i||a.cacheSt,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"cacheSt",{hash:{}})),d+=o(e),d}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+"?autoembed=true",i=c.entryId,g=i||b.entryId,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&playerId=",i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g),i=c.cacheSt,g=i||b.cacheSt,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;f+="&width=",i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+"&height=",i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g),i=c.flashVars,g=i||b.flashVars,i=c.flashVarsUrl,h=i||b.flashVarsUrl,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsUrl",g,{hash:{}}):g=h;if(g||g===0)f+=g;return f+='"></script>',f}),b.dynamic=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i,j=this,k="function",l=c.helperMissing,m=void 0,n=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"scriptUrl",{hash:{}})),f+=n(g)+'"></script>\n<div id="',i=c.playerId,g=i||b.playerId,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"playerId",{hash:{}})),f+=n(g)+'"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===k?g=h.call(b,g,{hash:{}}):h===m?g=l.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='></div>\n<script type="text/javascript">\nkWidget.',i=c.embedMethod,g=i||b.embedMethod,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"embedMethod",{hash:{}})),f+=n(g)+"(",i=c.kWidgetObject,g=i||b.kWidgetObject,typeof g===k?g=g.call(b,{hash:{}}):g===m&&(g=l.call(b,"kWidgetObject",{hash:{}}));if(g||g===0)f+=g;return f+=");\n</script>",f}),b.legacy=a(function(a,b,c,d,e){function p(a,b){var d="",e;return d+='\n	<a rel="media:thumbnail" href="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.thumbnailUrl,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.thumbnailUrl",{hash:{}})),d+=o(e)+'"></a>\n	<span property="dc:description" content="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.description,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.description",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:title" content="',i=c.entryMeta,e=i||a.entryMeta,e=e===null||e===undefined||e===!1?e:e.name,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"entryMeta.name",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:width" content="',i=c.width,e=i||a.width,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"width",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:height" content="',i=c.height,e=i||a.height,typeof e===l?e=e.call(a,{hash:{}}):e===n&&(e=m.call(a,"height",{hash:{}})),d+=o(e)+'"></span>\n	<span property="media:type" content="application/x-shockwave-flash"></span>	\n	',d}function q(a,b){return'\n	<a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a> \n	<a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>\n	<a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a>\n	'}c=c||a.helpers;var f="",g,h,i,j,k=this,l="function",m=c.helperMissing,n=void 0,o=this.escapeExpression;f+='<script type="text/javascript" src="',i=c.scriptUrl,g=i||b.scriptUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"scriptUrl",{hash:{}})),f+=o(g)+'"></script>\n<object id="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" name="',i=c.playerId,g=i||b.playerId,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"playerId",{hash:{}})),f+=o(g)+'" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" allowScriptAccess="always" height="',i=c.height,g=i||b.height,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"height",{hash:{}})),f+=o(g)+'" width="',i=c.width,g=i||b.width,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"width",{hash:{}})),f+=o(g)+'" bgcolor="#000000"',i=c.attributes,g=i||b.attributes,i=c.elAttributes,h=i||b.elAttributes,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"elAttributes",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+=' data="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'">\n	<param name="allowFullScreen" value="true" />\n	<param name="allowNetworking" value="all" />\n	<param name="allowScriptAccess" value="always" />\n	<param name="bgcolor" value="#000000" />\n	<param name="flashVars" value="',i=c.flashVars,g=i||b.flashVars,i=c.flashVarsString,h=i||b.flashVarsString,typeof h===l?g=h.call(b,g,{hash:{}}):h===n?g=m.call(b,"flashVarsString",g,{hash:{}}):g=h;if(g||g===0)f+=g;f+='" />\n	<param name="movie" value="',i=c.swfUrl,g=i||b.swfUrl,typeof g===l?g=g.call(b,{hash:{}}):g===n&&(g=m.call(b,"swfUrl",{hash:{}})),f+=o(g)+'" />\n	',i=c.includeSeoMetadata,g=i||b.includeSeoMetadata,h=c["if"],j=k.program(1,p,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;i=c.includeKalturaLinks,g=i||b.includeKalturaLinks,h=c["if"],j=k.program(3,q,e),j.hash={},j.fn=j,j.inverse=k.noop,g=h.call(b,g,j);if(g||g===0)f+=g;return f+="\n</object>",f})})()
 // Add indexOf to array object
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function (searchElement /*, fromIndex */ ) {
@@ -395,42 +395,6 @@ if (!Object.keys) {
   })();
 }
 (function( window, undefined ) {
-
-/**
-* Merge two object together
-*
-* @method extend
-* @param {Object} destination object to merge into
-* @param {Object} sourece object to merge from
-* @return {Object} Merged object
-*/
-var extend = function(destination, source) {
-    for (var property in source) {
-        if (!destination.hasOwnProperty(property)) {
-            destination[property] = source[property];
-        }
-    }
-    return destination;
-};
-/**
-* Check if property is null
-*
-* @method isNull
-* @param {Any} property some var
-* @return {Boolean}
-*/
-var isNull = function( property ) {
-	if (property.length && property.length > 0) {
-		return false;
-	}
-    if (property.length && property.length === 0) {
-    	return true;
-    }
-	if( typeof property === 'object' ) {
-		return (Object.keys(property).length > 0) ? false : true;
-	}
-	return !property;
-};
 /**
 * Kaltura Embed Code Generator
 * Used to generate different type of embed codes
@@ -604,7 +568,41 @@ EmbedCodeGenerator.prototype = {
 		*/		
 		includeSeoMetadata: false	
 	},
-
+	/**
+	* Merge two object together
+	*
+	* @method extend
+	* @param {Object} destination object to merge into
+	* @param {Object} sourece object to merge from
+	* @return {Object} Merged object
+	*/
+	extend: function(destination, source) {
+	    for (var property in source) {
+	        if (!destination.hasOwnProperty(property)) {
+	            destination[property] = source[property];
+	        }
+	    }
+	    return destination;
+	},
+	/**
+	* Check if property is null
+	*
+	* @method isNull
+	* @param {Any} property some var
+	* @return {Boolean}
+	*/
+	isNull: function( property ) {
+		if (property.length && property.length > 0) {
+			return false;
+		}
+	    if (property.length && property.length === 0) {
+	    	return true;
+	    }
+		if( typeof property === 'object' ) {
+			return (Object.keys(property).length > 0) ? false : true;
+		}
+		return !property;
+	},
 	/**
 	* Set default options to EmbedCodeGenerator instance
 	*
@@ -625,7 +623,7 @@ EmbedCodeGenerator.prototype = {
 
 		// Merge options with defaults
 		if( typeof options === 'object' ) {
-			this.options = extend(options, this.defaults);
+			this.options = this.extend(options, this.defaults);
 		}
 		// Set widgetId to partnerId if not defined
 		if( ! this.config('widgetId') && this.config('partnerId') ) {
@@ -669,7 +667,7 @@ EmbedCodeGenerator.prototype = {
 			i = 0;
 		// Check for required configuration
 		for(i; i<requiredLength; i++) {
-			if( isNull(params[this.required[i]]) ) {
+			if( this.isNull(params[this.required[i]]) ) {
 				throw 'Missing required parameter: ' + this.required[i];
 			}
 		}
@@ -769,7 +767,7 @@ EmbedCodeGenerator.prototype = {
 			attrs["resource"] = this.getSwfUrl( params );
 		}
 
-		params.attributes = extend(params.attributes, attrs);		
+		params.attributes = this.extend(params.attributes, attrs);		
 		return params.attributes;
 	},
 	/**
@@ -810,7 +808,11 @@ EmbedCodeGenerator.prototype = {
 		// Set default for params
 		params = params || {};
 		// Merge with options
-		params = extend( params, this.config() );
+		params = this.extend( params, this.config() );
+		// Set widgetId to partnerId if undefined
+		if( ! params.widgetId && params.partnerId ) {
+			params.widgetId = '_' + params.partnerId;
+		}
 
 		this.checkRequiredParams(params); // Check for missing params
 		this.checkValidType(params.embedType); // Check if embed type is valid
@@ -836,7 +838,7 @@ EmbedCodeGenerator.prototype = {
 			data['kWidgetObject'] = this.getEmbedObject( params );
 		}
 
-		data = extend( data, params );
+		data = this.extend( data, params );
 		return template( data );
 	}
 };

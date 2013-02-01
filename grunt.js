@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       version: '0.1.0',
       banner: '/*! Kaltura Embed Code Generator - v<%= meta.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '* http://www.kaltura.com/\n' +
+        '* https://github.com/kaltura/EmbedCodeGenerator\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
         'Ran Yefet; Licensed MIT */'
     },

@@ -30,23 +30,23 @@ It was designed to easiliy create embed codes on-the-fly for your projects.
 
 | Option     	| Description			| Default	|
 | -------------	| ------------------------ 	| ------------- |
-| embedType | Embed code type to generate. Can we one of: 'auto', 'dynamic', 'thumb', 'legacy' 	| "auto" |
-| playerId |   The player element Id to generate | "kaltura_player" |
-| protocol | Embed HTTP protocol to use | "http" | 
-| host | Host for loading html5 library & kdp swf | "www.kaltura.com" | 
-| securedHost | Secured host for loading html5 library & kdp swf | "www.kaltura.com" | 
-| widgetId | Kaltura Widget Id | _{partnerId} | 
-| partnerId | Kaltura Partner Id | null | 
-| cacheSt | Add cacheSt parameter to bust cache. Should be future timestamp | null | 
-| uiConfId | Kaltura UiConf Id | null | 
-| entryId | Kaltura Entry Id | null | 
-| entryMeta | Entry Metadata object | {name: null, description: null, thumbnailUrl: null} | 
-| width | Set player width | 400 | 
-| height | Set player height | 330 |
-| attributes | Adds additonal attributes to embed code. Example: { "class": "player" } | {} (empty object) |
-| flashVars | Adds flashVars to player. Example: { "autoPlay": "true" } | {} (empty object) |
-| includeKalturaLinks | Include Kaltura SEO links | true | 
-| includeSeoMetadata | Include Entry SEO Metadata ( taken from {entryMeta} option ) | false | 
+| embedType ```string``` | Embed code type to generate. Can we one of: 'auto', 'dynamic', 'thumb', 'legacy' 	| "auto" |
+| playerId ```string``` |   The player element Id to generate | "kaltura_player" |
+| protocol ```string``` | Embed HTTP protocol to use | "http" | 
+| host ```string``` | Host for loading html5 library & kdp swf | "www.kaltura.com" | 
+| securedHost ```string``` | Secured host for loading html5 library & kdp swf | "www.kaltura.com" | 
+| widgetId ```string``` | Kaltura Widget Id | _{partnerId} | 
+| partnerId ```int``` | Kaltura Partner Id | null | 
+| cacheSt ```int``` | Add cacheSt parameter to bust cache. Should be future timestamp | null | 
+| uiConfId ```int``` | Kaltura UiConf Id | null | 
+| entryId ```string``` | Kaltura Entry Id | null | 
+| entryMeta ```object``` | Entry Metadata object. Example: {name: "Foo", description: "Bar", thumbnailUrl: "http://foo.bar.com/img.jpg"} | null | 
+| width ```int``` | Set player width | 400 | 
+| height ```int``` | Set player height | 330 |
+| attributes ```object``` | Adds additonal attributes to embed code. Example: { "class": "player" } | {} (empty object) |
+| flashVars ```object``` | Adds flashVars to player. Example: { "autoPlay": "true" } | {} (empty object) |
+| includeKalturaLinks ```boolean``` | Include Kaltura SEO links | true | 
+| includeSeoMetadata ```boolean``` | Include Entry SEO Metadata ( taken from {entryMeta} option ) | false | 
 
 You can set the configuration options when creating a new instance to set the defaults 
 and you can also set the configuration when calling ```getCode``` method.

@@ -7,9 +7,9 @@
 	<param name="flashVars" value="{{{flashVarsString flashVars}}}" />
 	<param name="movie" value="{{swfUrl}}" />
 	{{#if includeSeoMetadata}}
-	<a rel="media:thumbnail" href="{{entry.thumbUrl}}"></a>
-	<span property="dc:description" content="{{entry.description}}"></span>
-	<span property="media:title" content="{{entry.name}}"></span>
+	<a rel="media:thumbnail" href="{{entryMeta.thumbUrl}}"></a>
+	<span property="dc:description" content="{{entryMeta.description}}"></span>
+	<span property="media:title" content="{{entryMeta.name}}"></span>
 	<span property="media:width" content="{{width}}"></span>
 	<span property="media:height" content="{{height}}"></span>
 	<span property="media:type" content="application/x-shockwave-flash"></span>	

@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kaltura Embed Code Generator by kaltura</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Kaltura Embed Code Generator</h1>
+        <p class="header">Creating embed codes never been easier!</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/kaltura/EmbedCodeGenerator/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/kaltura/EmbedCodeGenerator/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/kaltura/EmbedCodeGenerator">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/kaltura">kaltura</a></p>
+
+
+      </header>
+      <section>
+        <h1>Kaltura Embed Code Generator</h1>
+
+<p>This Javascript library can be used to generate Kaltura Embed Codes.</p>
+
+<p>It was designed to easiliy create embed codes on-the-fly for your projects.</p>
+
+<h2>Quick Start</h2>
+
+<ol>
+<li>
+<p>Include <code>KalturaEmbedCodeGenerator.js</code> to your page.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/{path_to_script}/KalturaEmbedCodeGenerator.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p>Create a new instance of the generator, pass in configuration object and call <code>getCode</code> method.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"code"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">gen</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">kEmbedCodeGenerator</span><span class="p">({</span>
+    <span class="nx">partnerId</span><span class="o">:</span> <span class="mi">0000</span><span class="p">,</span>
+    <span class="nx">uiConfId</span><span class="o">:</span> <span class="mi">999</span><span class="p">,</span>
+    <span class="nx">entryId</span><span class="o">:</span> <span class="s1">'0_xsd34g3'</span>
+<span class="p">});</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'code'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">gen</span><span class="p">.</span><span class="nx">getCode</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</li>
+</ol><h2>Configuration</h2>
+
+<table>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+<tr>
+<td>embedType <code>string</code>
+</td>
+<td>Embed code type to generate. Can we one of: 'auto', 'dynamic', 'thumb', 'legacy'</td>
+<td>"auto"</td>
+</tr>
+<tr>
+<td>playerId <code>string</code>
+</td>
+<td>The player element Id to generate</td>
+<td>"kaltura_player"</td>
+</tr>
+<tr>
+<td>protocol <code>string</code>
+</td>
+<td>Embed HTTP protocol to use</td>
+<td>"http"</td>
+</tr>
+<tr>
+<td>host <code>string</code>
+</td>
+<td>Host for loading html5 library &amp; kdp swf</td>
+<td>"<a href="http://www.kaltura.com">www.kaltura.com</a>"</td>
+</tr>
+<tr>
+<td>securedHost <code>string</code>
+</td>
+<td>Secured host for loading html5 library &amp; kdp swf</td>
+<td>"<a href="http://www.kaltura.com">www.kaltura.com</a>"</td>
+</tr>
+<tr>
+<td>widgetId <code>string</code>
+</td>
+<td>Kaltura Widget Id</td>
+<td>_{partnerId}</td>
+</tr>
+<tr>
+<td>partnerId <code>int</code>
+</td>
+<td>Kaltura Partner Id</td>
+<td>null</td>
+</tr>
+<tr>
+<td>cacheSt <code>int</code>
+</td>
+<td>Add cacheSt parameter to bust cache. Should be future timestamp</td>
+<td>null</td>
+</tr>
+<tr>
+<td>uiConfId <code>int</code>
+</td>
+<td>Kaltura UiConf Id</td>
+<td>null</td>
+</tr>
+<tr>
+<td>entryId <code>string</code>
+</td>
+<td>Kaltura Entry Id</td>
+<td>null</td>
+</tr>
+<tr>
+<td>entryMeta <code>object</code>
+</td>
+<td>Entry Metadata object. Example: {name: "Foo", description: "Bar", thumbnailUrl: "<a href="http://foo.bar.com/img.jpg%22">http://foo.bar.com/img.jpg"</a>}</td>
+<td>null</td>
+</tr>
+<tr>
+<td>width <code>int</code>
+</td>
+<td>Set player width</td>
+<td>400</td>
+</tr>
+<tr>
+<td>height <code>int</code>
+</td>
+<td>Set player height</td>
+<td>330</td>
+</tr>
+<tr>
+<td>attributes <code>object</code>
+</td>
+<td>Adds additonal attributes to embed code. Example: { "class": "player" }</td>
+<td>{} (empty object)</td>
+</tr>
+<tr>
+<td>flashVars <code>object</code>
+</td>
+<td>Adds flashVars to player. Example: { "autoPlay": "true" }</td>
+<td>{} (empty object)</td>
+</tr>
+<tr>
+<td>includeKalturaLinks <code>boolean</code>
+</td>
+<td>Include Kaltura SEO links</td>
+<td>true</td>
+</tr>
+<tr>
+<td>includeSeoMetadata <code>boolean</code>
+</td>
+<td>Include Entry SEO Metadata ( taken from {entryMeta} option )</td>
+<td>false</td>
+</tr>
+</table><p>You can set the configuration options when creating a new instance to set the defaults 
+and you can also set the configuration when calling <code>getCode</code> method.</p>
+
+<p>Any option that sets on <code>getCode</code> will override options that were set when creating the instance.</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">gen</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">kEmbedCodeGenerator</span><span class="p">({</span>
+    <span class="s1">'host'</span><span class="o">:</span> <span class="s1">'cdnapi.kaltura.com'</span><span class="p">,</span>
+    <span class="s1">'partnerId'</span><span class="o">:</span> <span class="mi">0000</span><span class="p">,</span>
+    <span class="s1">'width'</span><span class="o">:</span> <span class="mi">680</span><span class="p">,</span>
+    <span class="s1">'height'</span><span class="o">:</span> <span class="mi">420</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gen</span><span class="p">.</span><span class="nx">getCode</span><span class="p">({</span>
+    <span class="s1">'uiConfId'</span><span class="o">:</span> <span class="mi">0000000</span><span class="p">,</span>
+    <span class="s1">'entryId'</span><span class="o">:</span> <span class="s1">'x_0000000'</span><span class="p">,</span> 
+    <span class="s1">'height'</span><span class="o">:</span> <span class="mi">300</span> <span class="c1">// Will generate embed with "height" of 300px </span>
+<span class="p">}));</span>
+</pre></div>
+
+<h2>Dependencies</h2>
+
+<p>This library uses <a href="http://handlebarsjs.com/">Handlebars</a> to manage the embed code templates and includes <code>handlebars.runtime.js</code> library.
+If your project already uses handlebars, you can remove that file from <code>grunt.js</code> file.</p>
+
+<p>This library also uses <code>JSON.strinify</code> method which is supported nativaliy in modern browsers.
+If you need to support older browsers, please add the following code.</p>
+
+<div class="highlight"><pre><span class="c">&lt;!--[if lt IE 9]&gt;</span>
+<span class="c">&lt;script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"&gt;&lt;/script&gt;</span>
+<span class="c">&lt;![endif]--&gt;</span>
+</pre></div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

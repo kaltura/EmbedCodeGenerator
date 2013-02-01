@@ -807,6 +807,8 @@ EmbedCodeGenerator.prototype = {
 	*/
 	getCode: function( params ) {
 
+		// Set default for params
+		params = params || {};
 		// Merge with options
 		params = extend( params, this.config() );
 

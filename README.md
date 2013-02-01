@@ -16,13 +16,8 @@ Kaltura has several types of embed codes that can be used to embed Kaltura playe
 <textarea id="code"></textarea>
 <script>
 var gen = new kEmbedCodeGenerator({
-	host: 'www.kaltura.com',
 	partnerId: 0000,
-	uiConf: {
-		id: 9999,
-		width: 400,
-		height: 300
-	},
+	uiConfId: 999,
 	entryId: '0_xsd34g3'
 });
 var embedCode = gen.getCode();

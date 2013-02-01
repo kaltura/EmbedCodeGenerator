@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Kaltura Embed Code Generator Demo</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">		
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>	
+	<style>
+	.logo { margin: 10px 0 10px -32px; width: 180px; height: 64px; }
+	.header {padding-top: 13px;}
+	.form-horizontal .control-label { text-align: left; }
+	#playerContainer > iframe { width: 100%; height: 450px; border: 0; overflow: auto; }
+	#configWrapper { height: 600px; overflow-y: auto; }
+	pre code { overflow: auto; max-height: 150px;}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+	  <div class="row-fluid">
+	  	<div class="span4">
+	  		<img class="logo" src="kaltura-logo.jpg" alt="Kaltura Logo" />
+	  	</div>
+	  	<div class="span8 header">
+			<h4>Embed Code Generator</h4>
+			<p>This tool will help you generate & preview embed codes dynamically. <a href="https://github.com/kaltura/EmbedCodeGenerator">More Info</a></p>
+		</div>
+	  </div>
+	  <div class="row-fluid">
+	    <div class="span4">
+			<form id="config" class="form-horizontal">
+			  <fieldset>
+			    <legend>Configuration</legend>
+			    <div id="configWrapper">
+			    <div class="control-group">
+				    <label class="control-label">Host</label>
+				    <div class="controls">
+				    	<input name="host" type="text">
+				    </div>
+				</div>
+			    <div class="control-group">
+				    <label class="control-label">Secured Host</label>
+				    <div class="controls">
+				    	<input name="securedHost" type="text">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Protocol</label>
+				    <div class="controls">
+				    	<select name="protocol">
+				    		<option value="http">HTTP</option>
+				    		<option value="https">HTTPS</option>
+				    	</select>
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Embed Type</label>
+				    <div class="controls">
+				    	<select name="embedType">
+				    		<option value="auto">Auto Embed</option>
+				    		<option value="dynamic">Dynamic Embed</option>
+				    		<option value="thumb">Thumbnail Embed</option>
+				    		<option value="legacy">Legacy Embed</option>
+				    	</select>
+				    </div>
+				</div>				
+				<div class="control-group">
+				    <label class="control-label">Player Id</label>
+				    <div class="controls">
+				    	<input name="playerId" type="text">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Widget Id</label>
+				    <div class="controls">
+				    	<input name="widgetId" type="text" placeholder="_000">
+				    </div>
+				</div>		
+				<div class="control-group">
+				    <label class="control-label">Partner Id</label>
+				    <div class="controls">
+				    	<input name="partnerId" type="text" placeholder="00000">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Cache St</label>
+				    <div class="controls">
+				    	<input name="cacheSt" type="text" placeholder="1359735928">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">UiConf Id</label>
+				    <div class="controls">
+				    	<input name="uiConfId" type="text" placeholder="00000">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Entry Id</label>
+				    <div class="controls">
+				    	<input name="entryId" type="text" placeholder="0_ls4jdy8">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Entry Metadata</label>
+				    <div class="controls">
+				    	<input name="entryMeta[name]" type="text" placeholder="Name">
+				    	<input name="entryMeta[description]" type="text" placeholder="Description">
+				    	<input name="entryMeta[thumbnailUrl]" type="text" placeholder="Thumbnail URL">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Width</label>
+				    <div class="controls">
+				    	<input name="width" type="number" value="400">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label">Height</label>
+				    <div class="controls">
+				    	<input name="height" type="number" value="330">
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label >FlashVars <a href="#" data-field="flashVars" class="add-field"><i class="icon-plus"></i></a></label>
+				    <div id="flashVarsFields"></div>
+				</div>
+				<div class="control-group">
+				    <label >Attributes <a href="#" data-field="attributes" class="add-field"><i class="icon-plus"></i></a></label>
+				    <div id="attributesFields"></div>
+				</div>				
+				<div class="control-group">
+				    <div class="controls">
+						<label class="checkbox">
+					    	<input name="includeKalturaLinks" type="checkbox"> Include Kaltura SEO Links
+					    </label>
+						<label class="checkbox">
+					    	<input name="includeSeoMetadata" type="checkbox"> Include Entry SEO Metadata
+					    </label>					    
+				    </div>
+				</div>	
+				</div>			
+				<div class="control-group">
+				    <div class="pull-left">
+				      <button type="button" class="reset btn">Reset to Defaults</button></div>
+				      <div class="pull-right">
+				      <button type="submit" class="btn btn-primary">Generate</button>
+				    </div>
+				  </div>
+			  </fieldset>
+			</form>	      
+	    </div>
+	    <div class="span8">
+	      <h4>Embed Code</h4>
+	      <pre><code class="xml"></code></pre>
+	      <hr />
+	      <h4>Preview Player</h4>
+	      <div id="playerContainer"></div>
+	    </div>
+	  </div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>	
+	<script src="../dist/KalturaEmbedCodeGenerator.js"></script>
+	<script src="demo.js"></script>
+	<script>
+	$(function() {
+		Demo.setup({
+			partnerId: 423851,
+			uiConfId: 11598752,
+			entryId: '1_znvt6hgh',
+			entryMeta: {
+				name: 'Logo_Cyan.flv',
+				description: '',
+				thumbnailUrl: 'http://cdnsecakmi.kaltura.com/p/423851/sp/42385100/thumbnail/entry_id/1_znvt6hgh/version/100001/width/560/height/315'
+			}
+		});
+	});	
+	</script>
+</body>
+</html>

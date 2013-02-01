@@ -1,5 +1,5 @@
 /*! Kaltura Embed Code Generator - v0.1.0 - 2013-02-01
-* http://www.kaltura.com/
+* https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 
 // lib/handlebars/base.js
@@ -455,9 +455,9 @@ EmbedCodeGenerator.prototype = {
 		* 
 		* @property embedType
 		* @type {String}
-		* @default "legacy"
+		* @default "auto"
 		*/		
-		embedType: 'legacy',
+		embedType: 'auto',
 		/**
 		* The Player element Id / Name that will be used for embed code
 		* 
@@ -487,11 +487,11 @@ EmbedCodeGenerator.prototype = {
 		* Secured host for loading html5 library & kdp swf
 		* Used if protocol is: 'https'
 		* 
-		* @property secured_host
+		* @property securedHost
 		* @type {String}
 		* @default "www.kaltura.com"
 		*/		
-		secured_host: 'www.kaltura.com',
+		securedHost: 'www.kaltura.com',
 		/**
 		* Kaltura Widget Id
 		* 
@@ -600,9 +600,9 @@ EmbedCodeGenerator.prototype = {
 		* 
 		* @property includeSeoMetadata
 		* @type {Boolean}
-		* @default true,
+		* @default false,
 		*/		
-		includeSeoMetadata: true	
+		includeSeoMetadata: false	
 	},
 
 	/**
@@ -613,6 +613,8 @@ EmbedCodeGenerator.prototype = {
 	* @return {Object} Returns the current instance
 	*/
 	init: function( options ) {
+
+		options = options || {}; 
 
 		var defaults = this.defaults;
 
@@ -715,7 +717,7 @@ EmbedCodeGenerator.prototype = {
 	* @return {String} Embed host
 	*/
 	getHost: function( params ) {
-		return (params.protocol === 'http') ? params.host : params.secured_host;
+		return (params.protocol === 'http') ? params.host : params.securedHost;
 	},
 	/**
 	* Generate HTML5 library script url

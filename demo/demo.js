@@ -131,7 +131,8 @@ var Demo = {
 			// Save config to local storage
 			if( localStorage && typeof localStorage.setItem === 'function' ) {
 				localStorage.setItem(_this.storageName, JSON.stringify(config));
-			}			
+			}
+			config = _this.parseConfig(config);
 			try {
 				var embedCode = _this.generator.getCode(config);
 				$('code').html(_this.escapeHTML(embedCode));
@@ -143,6 +144,18 @@ var Demo = {
 			}
 			return false;
 		});		
+	},
+
+	parseConfig: function( config ) {
+		if( ! config.flashVars ) {
+			return config;
+		}
+		var flashVars = {};
+		for( var key in config.flashVars ) {
+			flashVars[ key ] = JSON.parse(config.flashVars[key]);
+		}
+		config.flashVars = flashVars;
+		return config;
 	},
 
 	setConfig: function( config ) {

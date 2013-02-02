@@ -82,4 +82,10 @@ If you need to support older browsers, please add the following code.
 <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
 <![endif]-->
 ```
+
+## Build minified version
+Just run:
+```
+grunt
+```
 	

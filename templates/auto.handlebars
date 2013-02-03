@@ -1,1 +1,2 @@
-<script type="text/javascript" src="{{scriptUrl}}?autoembed=true{{#if entryId}}&entry_id={{entryId}}{{/if}}&playerId={{playerId}}{{#if cacheSt}}&cache_st={{cacheSt}}{{/if}}&width={{width}}&height={{height}}{{{flashVarsUrl flashVars}}}"></script>
+{{#if includeSeoMetadata}}<div id="{{playerId}}"{{{elAttributes attributes}}}>{{{seoMetadata}}}{{{kalturaLinks}}}</div>
+{{/if}}<script type="text/javascript" src="{{scriptUrl}}?autoembed=true{{#if entryId}}&entry_id={{entryId}}{{/if}}&playerId={{playerId}}{{#if cacheSt}}&cache_st={{cacheSt}}{{/if}}&width={{width}}&height={{height}}{{{flashVarsUrl flashVars}}}"></script>

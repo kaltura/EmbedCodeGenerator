@@ -128,6 +128,7 @@ var Demo = {
 		});
 		$form.submit(function(e) {
 			var config = $(this).serializeObject();
+			config = _this.fixCheckboxes(config);
 			// Save config to local storage
 			if( localStorage && typeof localStorage.setItem === 'function' ) {
 				localStorage.setItem(_this.storageName, JSON.stringify(config));
@@ -144,6 +145,12 @@ var Demo = {
 			}
 			return false;
 		});		
+	},
+
+	fixCheckboxes: function( config ) {
+		config.includeKalturaLinks = $('input[name=includeKalturaLinks]')[0].checked;
+		config.includeSeoMetadata = $('input[name=includeSeoMetadata]')[0].checked;
+		return config;
 	},
 
 	parseConfig: function( config ) {

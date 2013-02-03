@@ -1,0 +1,9 @@
+{{#if includeSeoMetadata}}
+<!-- Search engine metadata, based on schema.org/VideoObject -->
+<span itemprop="name" content="{{entryMeta.name}}"></span>
+<span itemprop="description" content="{{entryMeta.description}}"></span>
+<span itemprop="duration" content="{{entryMeta.duration}}"></span>
+<span itemprop="thumbnail" content="{{entryMeta.thumbnailUrl}}"></span>
+<span itemprop="width" content="{{width}}"></span>
+<span itemprop="height" content="{{height}}"></span>
+{{/if}}

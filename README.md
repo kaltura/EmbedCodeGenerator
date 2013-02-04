@@ -30,7 +30,7 @@ It was designed to easiliy create embed codes on-the-fly for your projects.
 
 | Option     	| Description			| Default	|
 | -------------	| ------------------------ 	| ------------- |
-| embedType ```string``` | Embed code type to generate. Can we one of: 'auto', 'dynamic', 'thumb', 'legacy' 	| "auto" |
+| embedType ```string``` | Embed code type to generate. Can we one of: 'auto', 'dynamic', 'thumb', 'iframe', 'legacy' 	| "auto" |
 | playerId ```string``` |   The player element Id to generate | "kaltura_player" |
 | protocol ```string``` | Embed HTTP protocol to use | "http" | 
 | host ```string``` | Host for loading html5 library & kdp swf | "www.kaltura.com" | 

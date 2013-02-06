@@ -157,9 +157,14 @@ var Demo = {
 		if( ! config.flashVars ) {
 			return config;
 		}
-		var flashVars = {};
+		var flashVars = {},
+			val;
 		for( var key in config.flashVars ) {
-			flashVars[ key ] = JSON.parse(config.flashVars[key]);
+			val = config.flashVars[key];
+			if( val.charAt(0) == '{' && val.charAt(val.length) == '}') {
+				val = JSON.parse(val)
+			}
+			flashVars[ key ] = val;
 		}
 		config.flashVars = flashVars;
 		return config;

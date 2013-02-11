@@ -47,7 +47,7 @@ It was designed to easiliy create embed codes on-the-fly for your projects.
 | flashVars ```object``` | Adds flashVars to player. Example: { "autoPlay": "true" } | {} (empty object) |
 | includeKalturaLinks ```boolean``` | Include Kaltura SEO links | true | 
 | includeSeoMetadata ```boolean``` | Include Entry SEO Metadata ( taken from {entryMeta} option ) | false | 
-| includeHtml5Library ```boolean``` | Inclde HTML5 Library in legacy embed type || true | 
+| includeHtml5Library ```boolean``` | Inclde HTML5 Library in legacy embed type | true | 
 
 You can set the configuration options when creating a new instance to set the defaults 
 and you can also set the configuration when calling ```getCode``` method.

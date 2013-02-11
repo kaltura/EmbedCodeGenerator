@@ -150,6 +150,7 @@ var Demo = {
 	fixCheckboxes: function( config ) {
 		config.includeKalturaLinks = $('input[name=includeKalturaLinks]')[0].checked;
 		config.includeSeoMetadata = $('input[name=includeSeoMetadata]')[0].checked;
+		config.includeHtml5Library = $('input[name=includeHtml5Library]')[0].checked;
 		return config;
 	},
 

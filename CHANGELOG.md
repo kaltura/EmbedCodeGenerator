@@ -1,3 +1,6 @@
+== 1.0.2 ( Feb, 11th 2013 )
+ - Added configuration for including Html5 library with legacy embed
+
 == 1.0.1 ( Feb, 3rd 2013 )
  - Added support for Iframe embed
  - SEO support to all embed codes

@@ -1,3 +1,6 @@
+== 1.0.3 ( Feb, 21 2013 )
+ - Fixed error in modifing the original params object in getCode method
+
 == 1.0.2 ( Feb, 11th 2013 )
  - Added configuration for including Html5 library with legacy embed
 

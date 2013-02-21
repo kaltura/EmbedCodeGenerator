@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     meta: {
-      version: '1.0.2',
+      version: '1.0.3',
       banner: '/*! Kaltura Embed Code Generator - v<%= meta.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '* https://github.com/kaltura/EmbedCodeGenerator\n' +

@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v1.0.2 - 2013-02-11
+/*! Kaltura Embed Code Generator - v1.0.3 - 2013-02-21
 * https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 
@@ -599,7 +599,7 @@ EmbedCodeGenerator.prototype = {
 	*/
 	extend: function(destination, source) {
 	    for (var property in source) {
-	        if (!destination.hasOwnProperty(property)) {
+	        if (source.hasOwnProperty(property) && !destination.hasOwnProperty(property)) {
 	            destination[property] = source[property];
 	        }
 	    }
@@ -769,10 +769,6 @@ EmbedCodeGenerator.prototype = {
 	* @return {Object} Attributes object
 	*/
 	getAttributes: function( params ) {
-		if( ! params ) { 
-			return {}; 
-		}
-
 		var attrs = {};
 
 		// Add style attribute for dynamic / thumb embeds
@@ -793,8 +789,7 @@ EmbedCodeGenerator.prototype = {
 			}
 		}
 
-		params.attributes = this.extend(params.attributes, attrs);		
-		return params.attributes;
+		return attrs;
 	},
 	/**
 	* Generate kWidget object for HTML5 library
@@ -829,9 +824,9 @@ EmbedCodeGenerator.prototype = {
 	* @param {Object} params Configuration object
 	* @return {String} HTML embed code
 	*/
-	getCode: function( params ) {
+	getCode: function( localParams ) {
 		// Set default for params
-		params = params || {};
+		var params = (localParams === undefined) ? {} : this.extend({}, localParams);
 		// Merge with options
 		params = this.extend( params, this.config() );
 		// Set widgetId to partnerId if undefined

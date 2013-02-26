@@ -1,3 +1,6 @@
+== 1.0.4 ( Feb, 26 2013 )
+ - Fixed Auto embed with on page target ( missing width/height for target )
+
 == 1.0.3 ( Feb, 21 2013 )
  - Fixed error in modifing the original params object in getCode method
 

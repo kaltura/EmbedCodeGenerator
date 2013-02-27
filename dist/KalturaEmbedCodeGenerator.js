@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v1.0.3 - 2013-02-21
+/*! Kaltura Embed Code Generator - v1.0.5 - 2013-02-27
 * https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 
@@ -772,7 +772,8 @@ EmbedCodeGenerator.prototype = {
 		var attrs = {};
 
 		// Add style attribute for dynamic / thumb embeds
-		if( this.isKWidgetEmbed( params.embedType ) ) {
+		// Or if includeSeoMetadata is true
+		if( this.isKWidgetEmbed( params.embedType ) || params.includeSeoMetadata ) {
 			attrs['style'] = 'width: ' + params.width + 'px; height: ' + params.height + 'px;';
 		}
 
@@ -808,7 +809,7 @@ EmbedCodeGenerator.prototype = {
 		};
 		// Add cacheSt
 		if( params.cacheSt ) {
-			embedObject['cache_st'] = cacheSt;
+			embedObject['cache_st'] = params.cacheSt;
 		}
 		// Add entryId
 		if( params.entryId ) {

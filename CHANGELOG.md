@@ -1,3 +1,6 @@
+== 1.0.5 ( Feb, 27 2013 )
+ - Fixed undefined cacheSt parameter
+ 
 == 1.0.4 ( Feb, 26 2013 )
  - Fixed Auto embed with on page target ( missing width/height for target )
 

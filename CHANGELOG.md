@@ -1,3 +1,6 @@
+== 1.0.6 ( Feb, 28 2013 )
+ - Updated Iframe embed url
+
 == 1.0.5 ( Feb, 27 2013 )
  - Fixed undefined cacheSt parameter
  

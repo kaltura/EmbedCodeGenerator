@@ -1,6 +1,6 @@
 {
   "name": "KalturaEmbedCodeGenerator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This Javascript library can be used to generate Kaltura Embed Codes.",
   "main": "Gruntfile.js",
   "dependencies": {},

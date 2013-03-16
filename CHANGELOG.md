@@ -1,3 +1,6 @@
+== 1.0.7 ( Mar, 16 2013 ) 
+ - Added Id attribute to Iframe embed
+
 == 1.0.6 ( Feb, 28 2013 )
  - Updated Iframe embed url
 

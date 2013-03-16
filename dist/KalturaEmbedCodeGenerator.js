@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v1.0.6 - 2013-03-11
+/*! Kaltura Embed Code Generator - v1.0.7 - 2013-03-16
 * https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2013 Ran Yefet; Licensed MIT */
 // lib/handlebars/base.js
@@ -465,7 +465,11 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<iframe src=\"";
+  buffer += "<iframe id=\"";
+  if (stack1 = helpers.playerId) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.playerId; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" src=\"";
   if (stack1 = helpers.protocol) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.protocol; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

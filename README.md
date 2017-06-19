@@ -57,7 +57,8 @@ Any option that sets on ```getCode``` will override options that were set when c
 ```javascript
 var gen = new kEmbedCodeGenerator({
 	'host': 'cdnapi.kaltura.com',
-	'partnerId': 0000,
+	'partnerId': 1111,
+	'widgetId': 1111,
 	'width': 680,
 	'height': 420
 });

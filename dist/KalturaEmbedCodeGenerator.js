@@ -1,6 +1,6 @@
-/*! Kaltura Embed Code Generator - v1.0.7 - 2013-03-16
+/*! Kaltura Embed Code Generator - v1.0.7 - 2018-01-23
 * https://github.com/kaltura/EmbedCodeGenerator
-* Copyright (c) 2013 Ran Yefet; Licensed MIT */
+* Copyright (c) 2018 Ran Yefet; Licensed MIT */
 // lib/handlebars/base.js
 
 /*jshint eqnull:true*/
@@ -553,14 +553,14 @@ function program1(depth0,data) {
 function program3(depth0,data) {
   
   var buffer = "", stack1, stack2;
-  buffer += "\n	<a rel=\"media:thumbnailUrl\" href=\""
+  buffer += "\n	<a rel=\"media:thumbnail\" href=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.entryMeta),stack1 == null || stack1 === false ? stack1 : stack1.thumbnailUrl)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"></span>\n<span itemprop=\"uploadDate\" content=\""
-    + escapeExpression(((stack1 = ((stack1 = depth0.entryMeta),stack1 == null || stack1 === false ? stack1 : stack1.uploadDate)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\"></a>\n	<span property=\"dc:description\" content=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.entryMeta),stack1 == null || stack1 === false ? stack1 : stack1.description)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\"></span>\n	<span property=\"media:title\" content=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.entryMeta),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"></span>\n    <span property=\"media:uploadDate\" content=\""
+    + escapeExpression(((stack1 = ((stack1 = depth0.entryMeta),stack1 == null || stack1 === false ? stack1 : stack1.uploadDate)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\"></span>\n	<span property=\"media:width\" content=\"";
   if (stack2 = helpers.width) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.width; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
@@ -930,6 +930,12 @@ EmbedCodeGenerator.prototype = {
 	* @return {Boolean}
 	*/
 	isNull: function( property ) {
+
+		// Null ?
+		if (property === null) {
+			return true;
+		}
+
 		if (property.length && property.length > 0) {
 			return false;
 		}
@@ -1177,11 +1183,10 @@ EmbedCodeGenerator.prototype = {
 			data['embedMethod'] = (params.embedType == 'dynamic') ? 'embed' : 'thumbEmbed';
 			data['kWidgetObject'] = this.getEmbedObject( params );
 		}
-
         var date = parseInt(params.entryMeta.uploadDate);
         params.entryMeta.uploadDate = new Date(date*1000).toISOString();
-        data = this.extend( data, params );
-        return template( data );
+		data = this.extend( data, params );
+		return template( data );
 	}
 };
 

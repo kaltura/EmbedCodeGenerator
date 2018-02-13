@@ -1,4 +1,4 @@
-/*! Kaltura Embed Code Generator - v1.0.7 - 2018-01-23
+/*! Kaltura Embed Code Generator - v1.0.7 - 2018-02-13
 * https://github.com/kaltura/EmbedCodeGenerator
 * Copyright (c) 2018 Ran Yefet; Licensed MIT */
 // lib/handlebars/base.js
@@ -1184,7 +1184,9 @@ EmbedCodeGenerator.prototype = {
 			data['kWidgetObject'] = this.getEmbedObject( params );
 		}
         var date = parseInt(params.entryMeta.uploadDate);
-        params.entryMeta.uploadDate = new Date(date*1000).toISOString();
+        if (date.toString().length === 10) {
+            params.entryMeta.uploadDate = new Date(date*1000).toISOString();
+        }
 		data = this.extend( data, params );
 		return template( data );
 	}

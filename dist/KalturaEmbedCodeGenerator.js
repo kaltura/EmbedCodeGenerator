@@ -1184,9 +1184,8 @@ EmbedCodeGenerator.prototype = {
 			data['kWidgetObject'] = this.getEmbedObject( params );
 		}
         var unixTimeStamp = params.entryMeta.uploadDate;
-        if (unixTimeStamp.length === 10) {
-            var date = parseInt(params.entryMeta.uploadDate);
-            params.entryMeta.uploadDate = new Date(date*1000).toISOString();
+        if (unixTimeStamp.toString().length === 10) {
+            params.entryMeta.uploadDate = new Date(unixTimeStamp*1000).toISOString();
         }
 		data = this.extend( data, params );
 		return template( data );

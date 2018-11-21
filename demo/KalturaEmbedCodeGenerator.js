@@ -781,7 +781,7 @@ EmbedCodeGenerator.prototype = {
 		* @type {String}
 		* @default "www.kaltura.com"
 		*/		
-		securedHost: 'www.kaltura.com',
+		securedHost: 'cdnapisec.kaltura.com',
 		/**
 		* Kaltura Widget Id
 		* 

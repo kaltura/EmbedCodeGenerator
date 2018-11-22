@@ -1050,6 +1050,7 @@ EmbedCodeGenerator.prototype = {
 	* @return {String} Embed host
 	*/
 	getHost: function( params ) {
+		console.log(params);
 		return (params.protocol === 'http') ? params.host : params.securedHost;
 	},
 	/**
@@ -1060,7 +1061,7 @@ EmbedCodeGenerator.prototype = {
 	* @return {String} HTML5 library script Url
 	*/
 	getScriptUrl: function( params ) {
-		return params.protocol + '://' + this.getHost(params) + '/p/' + params.partnerId + '/sp/' + params.partnerId + '00/embedIframeJs/uiconf_id/' + params.uiConfId + '/partner_id/' + params.partnerId;
+		return 'https' + '://' + this.getHost(params) + '/p/' + params.partnerId + '/sp/' + params.partnerId + '00/embedIframeJs/uiconf_id/' + params.uiConfId + '/partner_id/' + params.partnerId;
 	},
 	/**
 	* Generate Flash SWF url

@@ -764,7 +764,7 @@ EmbedCodeGenerator.prototype = {
 		* @type {String}
 		* @default "http"
 		*/			
-		protocol: 'http',
+		protocol: 'https',
 		/**
 		* Host for loading html5 library & kdp swf
 		* 

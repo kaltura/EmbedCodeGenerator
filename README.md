@@ -76,12 +76,12 @@ If you like to play with all the different options you're welcome to try out the
 This library uses [Handlebars](http://handlebarsjs.com/) to manage the embed code templates and includes ```handlebars.runtime.js``` library.
 If your project already uses handlebars, you can remove that file from ```grunt.js``` file.
 
-This library also uses ```JSON.strinify``` method which is supported nativaliy in modern browsers.
+This library also uses ```JSON.strinify``` method which is supported natively in modern browsers.
 If you need to support older browsers, please add the following code.
 
 ```html
 <!--[if lt IE 9]>
-<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.min.js"></script>
 <![endif]-->
 ```
 

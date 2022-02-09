@@ -3,21 +3,22 @@
   "version": "1.1.0",
   "description": "This Javascript library can be used to generate Kaltura Embed Codes.",
   "main": "Gruntfile.js",
-  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-handlebars": "~0.5.6"
+    "grunt": "1.4.1",
+    "grunt-contrib-concat": "2.0.0",
+    "grunt-contrib-handlebars": "3.0.0",
+    "grunt-contrib-uglify": "5.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kaltura/EmbedCodeGenerator.git"
   },
-  "author": "Ran Yefet",
   "license": "GPL",
-  "readmeFilename": "README.md"
+  "config": {
+    "distFilename": "KalturaEmbedCodeGenerator"
+  }
 }
